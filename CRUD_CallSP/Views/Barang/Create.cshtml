@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/scripts/bootstrap.min.js" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <form method="post">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Name</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="nama_barang" class="col-xs-10 col-sm-8" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Price</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="harga_barang" class="col-xs-10 col-sm-8" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Stock</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="total_barang" class="col-xs-10 col-sm-8" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                    <a href="/Barang/Index" class="btn btn-default">Back to Index</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    @{ 
+        if (TempData["msg"]!=null)
+        {
+            <script>alert('@TempData["msg"]')</script>
+        }
+    }
+</body>
+</html>
